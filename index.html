@@ -1,17 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tractor Tracking System</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tractor Tracking System</title>
+<link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
+<header class="header">
 <h1>🚜 Tractor Tracking System</h1>
-<p>Welcome to the Professional Tractor Tracking System Website.</p>
+<p>Professional Dashboard</p>
+</header>
 
-<button onclick="showMessage()">Track Tractor</button>
+<section class="summary">
+
+<div class="card">
+<h2>Total Tractors</h2>
+<h3>7</h3>
+</div>
+
+<div class="card">
+<h2>Running</h2>
+<h3 id="running">5</h3>
+</div>
+
+<div class="card">
+<h2>Stopped</h2>
+<h3 id="stopped">2</h3>
+</div>
+
+</section>
+
+<section class="search">
+<input type="text" placeholder="Search Tractor...">
+</section>
+
+<section class="tractors">
+
+<div class="tractor-card">
+<h2>🚜 Tractor 1</h2>
+<p><b>Customer:</b> Customer 1</p>
+<p><b>Driver:</b> Driver 1</p>
+<p><b>Phone:</b> 9876543210</p>
+<p><b>Location:</b> Yadgir</p>
+<p><b>Status:</b> <span class="run">Running</span></p>
+<button>Update Location</button>
+</div>
+
+<div class="tractor-card">
+<h2>🚜 Tractor 2</h2>
+<p><b>Customer:</b> Customer 2</p>
+<p><b>Driver:</b> Driver 2</p>
+<p><b>Phone:</b> 9876543211</p>
+<p><b>Location:</b> Kalaburagi</p>
+<p><b>Status:</b> <span class="stop">Stopped</span></p>
+<button>Update Location</button>
+</div>
 
 <script src="script.js"></script>
 
