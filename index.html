@@ -9,9 +9,33 @@
 
 <body>
 
-<header class="header">
-<h1>🚜 Tractor Tracking System</h1>
-<p>Professional Dashboard</p>
+<header class="hero">
+  <div class="overlay">
+    <h1>🚜 Tractor Tracking System</h1>
+    <p>Professional Fleet Management Dashboard</p>
+
+    <div class="top-cards">
+      <div class="card">
+        <h2>7</h2>
+        <span>Total Tractors</span>
+      </div>
+
+      <div class="card">
+        <h2>5</h2>
+        <span>Running</span>
+      </div>
+
+      <div class="card">
+        <h2>2</h2>
+        <span>Stopped</span>
+      </div>
+    </div>
+
+    <div class="search-box">
+      <input type="text" id="search" placeholder="Search Tractor / Customer / Driver">
+      <button onclick="searchTractor()">Search</button>
+    </div>
+  </div>
 </header>
 
 <section class="summary">
