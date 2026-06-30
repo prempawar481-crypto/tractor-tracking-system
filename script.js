@@ -1,4 +1,6 @@
-function searchTractor() {
+}
+
+function searchCustomer() {
   const input = document.getElementById("search").value.toLowerCase();
   const tractors = document.querySelectorAll(".tractor-card");
 
