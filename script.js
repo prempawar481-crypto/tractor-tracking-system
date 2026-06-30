@@ -38,4 +38,47 @@ name:"Vishwanath S/o Ningappa",
 tractor:"Massey Ferguson 7250 50 HP",
 location:"Doddaballapur",
 status:"Running"
+},{
+phone:"9972905676",
+name:"Basanagouda S/o Karabasappa Danareddy",
+tractor:"New Holland 3636 TX",
+location:"Bangalore",
+status:"Running"
 },
+
+{
+phone:"9900578282",
+name:"Sabjavali S/o Muhammad Hussain",
+tractor:"Swaraj 744 XT",
+location:"Bangalore",
+status:"Running"
+},
+
+{
+phone:"9741237506",
+name:"Shivaraya S/o Yellappa",
+tractor:"Water Pump",
+location:"Hubballi",
+status:"Running"
+}
+
+];
+
+function searchCustomer(){
+
+let phone=document.getElementById("phoneSearch").value.trim();
+
+let customer=customers.find(c=>c.phone===phone);
+
+if(!customer){
+alert("Customer Not Found");
+return;
+}
+
+document.getElementById("customerDetails").style.display="block";
+
+document.getElementById("customerName").innerHTML=customer.name;
+
+document.getElementById("customerPhone").innerHTML=customer.phone;
+
+document.getElementById("tractorModel").innerHTML=customer.tractor;
