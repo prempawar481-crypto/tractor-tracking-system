@@ -82,3 +82,31 @@ document.getElementById("customerName").innerHTML=customer.name;
 document.getElementById("customerPhone").innerHTML=customer.phone;
 
 document.getElementById("tractorModel").innerHTML=customer.tractor;
+document.getElementById("tractorLocation").innerHTML =
+customer.location;
+
+document.getElementById("tractorStatus").innerHTML =
+customer.status;
+
+}
+
+function updateLocation(){
+
+let newLocation = prompt("Enter Current Location");
+
+if(newLocation){
+
+document.getElementById("tractorLocation").innerHTML =
+newLocation;
+
+alert("Location Updated Successfully");
+
+}
+
+}
+
+function searchTractor(){
+
+searchCustomer();
+
+}
