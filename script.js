@@ -10,7 +10,7 @@ function searchCustomer() {
     } else {
       card.style.display = "none";
     }
-  });
+  })
 }
 
 function updateLocation(button) {
