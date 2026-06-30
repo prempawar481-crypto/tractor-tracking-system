@@ -1,58 +1,54 @@
 body{
-  margin:0;
-  font-family:Arial,sans-serif;
-  background:#eef5ee;
+margin:0;
+font-family:Arial,sans-serif;
+background:#f3f3f3;
 }
 
 .hero{
-  background:linear-gradient(135deg,#0b7a2f,#1fa34a);
-  color:#fff;
-  text-align:center;
-  padding:40px 20px;
+background:#146b2e;
+color:white;
+text-align:center;
+padding:20px;
 }
 
-.overlay h1{
-  font-size:34px;
-  margin-bottom:10px;
+.login-box{
+width:90%;
+max-width:400px;
+margin:20px auto;
+background:white;
+padding:20px;
+border-radius:10px;
+box-shadow:0 0 10px rgba(0,0,0,.2);
+text-align:center;
 }
 
-.overlay p{
-  font-size:18px;
-  margin-bottom:25px;
+.login-box input{
+width:90%;
+padding:12px;
+margin:10px 0;
+border:1px solid #ccc;
+border-radius:8px;
 }
 
-.top-cards{
-  display:flex;
-  justify-content:center;
-  gap:15px;
-  flex-wrap:wrap;
+.login-box button{
+background:#146b2e;
+color:white;
+padding:12px 20px;
+border:none;
+border-radius:8px;
+cursor:pointer;
 }
 
-.card{
-  background:#fff;
-  color:#222;
-  padding:20px;
-  border-radius:15px;
-  min-width:130px;
-  box-shadow:0 6px 15px rgba(0,0,0,.2);
+.tractor-card{
+width:90%;
+max-width:500px;
+margin:20px auto;
+background:white;
+padding:20px;
+border-radius:10px;
+box-shadow:0 0 10px rgba(0,0,0,.2);
 }
 
-.search-box{
-  margin-top:25px;
-}
-
-.search-box input{
-  width:260px;
-  padding:12px;
-  border:none;
-  border-radius:8px;
-}
-
-.search-box button{
-  padding:12px 20px;
-  background:#ffd400;
-  border:none;
-  border-radius:8px;
-  font-weight:bold;
-  cursor:pointer;
+.tractor-card h2{
+color:#146b2e;
 }
