@@ -1,1 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TRACTOR Transport Tracking System</title>
+<link rel="stylesheet" href="style.css">
+</head>
 
+<body>
+
+<header class="hero">
+<h1>🚛 TRACTOR Transport Tracking System</h1>
+<p>Professional Tractor Transport Tracking Portal</p>
+</header>
+
+<section class="login-box">
+
+<h2>Customer Login</h2>
+
+<input
+type="text"
+id="phoneSearch"
+placeholder="Enter Mobile Number">
+
+<button onclick="searchCustomer()">
+Login
+</button>
+
+</section>
+
+<div id="customerDetails" style="display:none;">
+
+<div class="tractor-card">
+
+<h2 id="customerName"></h2>
+
+<p>
+<b>Phone :</b>
+<span id="customerPhone"></span>
+</p>
+
+<p>
+<b>Tractor :</b>
+<span id="tractorModel"></span>
+</p>
+
+<p>
+<b>Location :</b>
+<span id="tractorLocation"></span>
+</p>
+
+<p>
+<b>Status :</b>
+<span id="tractorStatus"></span>
+</p>
+
+<button onclick="updateLocation()">
+Update Location
+</button>
+
+</div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
