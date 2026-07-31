@@ -1,26 +1,37 @@
-const customers = [
-  {
-    phone: "8495038473",
-    name: "Mahantappa S/o Guranna",
-    tractor: "Mahindra 575 DI",
-    location: "Bangalore",
-    status: "PDI Verification"
-  }
-];
+<!DOCTYPE html>
+<html>
+<head>
+<title>TRACTOR Transport Tracking System</title>
+<link rel="stylesheet" href="style.css">
+</head>
 
-function searchCustomer() {
-  let phone = document.getElementById("phoneSearch").value.trim();
+<body>
 
-  let customer = customers.find(c => c.phone === phone);
+<div class="container">
 
-  if (!customer) {
-    alert("Customer Not Found");
-    return;
-  }
+<h1>🚜 TRACTOR Transport Tracking System</h1>
 
-  document.getElementById("customerDetails").style.display = "block";
-  document.getElementById("customerName").innerText = customer.name;
-  document.getElementById("tractorModel").innerText = customer.tractor;
-  document.getElementById("tractorLocation").innerText = customer.location;
-  document.getElementById("tractorStatus").innerText = customer.status;
-}
+<input type="text" id="phoneSearch" placeholder="Enter Mobile Number">
+
+<button onclick="searchCustomer()">Search</button>
+
+<div id="customerDetails" style="display:none; margin-top:20px;">
+
+<h2>Customer Details</h2>
+
+<p><b>Name :</b> <span id="customerName"></span></p>
+
+<p><b>Tractor :</b> <span id="tractorModel"></span></p>
+
+<p><b>Location :</b> <span id="tractorLocation"></span></p>
+
+<p><b>Status :</b> <span id="tractorStatus"></span></p>
+
+</div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
