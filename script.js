@@ -1,11 +1,11 @@
 const customers = [
-{
-  phone: "8495038473",
-  name: "Mahantappa S/o Guranna",
-  tractor: "Mahindra 575 DI",
-  location: "Bangalore",
-  status: "PDI Verification"
-}
+  {
+    phone: "8495038473",
+    name: "Mahantappa S/o Guranna",
+    tractor: "Mahindra 575 DI",
+    location: "Bangalore",
+    status: "PDI Verification"
+  }
 ];
 
 function searchCustomer() {
@@ -19,9 +19,9 @@ function searchCustomer() {
   }
 
   document.getElementById("customerDetails").style.display = "block";
+
   document.getElementById("customerName").innerHTML = customer.name;
-  document.getElementById("customerPhone").innerHTML = customer.phone;
   document.getElementById("tractorModel").innerHTML = customer.tractor;
-  document.getElementById("currentLocation").innerHTML = customer.location;
-  document.getElementById("currentStatus").innerHTML = customer.status;
+  document.getElementById("tractorLocation").innerHTML = customer.location;
+  document.getElementById("tractorStatus").innerHTML = customer.status;
 }
