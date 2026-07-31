@@ -1,34 +1,28 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>TRACTOR Transport Tracking System</title>
-<link rel="stylesheet" href="style.css">
+    <title>TRACTOR Transport Tracking System</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
 <div class="container">
+    <h1>🚜 TRACTOR Transport Tracking System</h1>
 
-<h1>🚜 TRACTOR Transport Tracking System</h1>
+    <input type="text" id="phoneSearch" placeholder="Enter Mobile Number">
+    <button onclick="searchCustomer()">Search</button>
 
-<input type="text" id="phoneSearch" placeholder="Enter Mobile Number">
+    <div id="customerDetails" style="display:none; margin-top:20px;">
+        <h2>Customer Details</h2>
 
-<button onclick="searchCustomer()">Search</button>
+        <p><b>Name :</b> <span id="customerName"></span></p>
 
-<div id="customerDetails" style="display:none; margin-top:20px;">
+        <p><b>Tractor :</b> <span id="tractorModel"></span></p>
 
-<h2>Customer Details</h2>
+        <p><b>Location :</b> <span id="tractorLocation"></span></p>
 
-<p><b>Name :</b> <span id="customerName"></span></p>
-
-<p><b>Tractor :</b> <span id="tractorModel"></span></p>
-
-<p><b>Location :</b> <span id="tractorLocation"></span></p>
-
-<p><b>Status :</b> <span id="tractorStatus"></span></p>
-
-</div>
-
+        <p><b>Status :</b> <span id="tractorStatus"></span></p>
+    </div>
 </div>
 
 <script src="script.js"></script>
