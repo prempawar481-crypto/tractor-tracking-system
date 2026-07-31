@@ -59,17 +59,17 @@ phone:"9741237506",
 name:"Shivaraya S/o Yellappa",
 tractor:"Water Pump",
 location:"Hubballi",
-status:"Running"
-}
-
-];{
+status:"Running
+},
+{
   phone: "8495038473",
   name: "Mahantappa S/o Guranna",
   tractor: "Mahindra 575 DI",
   location: "Bangalore",
   status: "PDI Verification"
-}
 
+}
+];
 function searchCustomer(){
 
 let phone=document.getElementById("phoneSearch").value.trim();
