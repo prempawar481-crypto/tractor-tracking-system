@@ -13,7 +13,7 @@ phone:"7204258784",
 name:"Ravikumar S/o Hanamantraya Hosur",
 tractor:"John Deere 5050 Gear Pro",
 location:"Pune",
-status:"Running"
+status:status:"Running"
 },
 
 {
@@ -59,14 +59,16 @@ phone:"9741237506",
 name:"Shivaraya S/o Yellappa",
 tractor:"Water Pump",
 location:"Hubballi",
-status:"Running
-},
+status:
+},status:"Running"
 {
+  
   phone: "8495038473",
   name: "Mahantappa S/o Guranna",
   tractor: "Mahindra 575 DI",
   location: "Bangalore",
   status: "PDI Verification"
+
 
 }
 ];
