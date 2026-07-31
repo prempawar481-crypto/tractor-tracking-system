@@ -62,7 +62,13 @@ location:"Hubballi",
 status:"Running"
 }
 
-];
+];{
+  phone: "8495038473",
+  name: "Mahantappa S/o Guranna",
+  tractor: "Mahindra 575 DI",
+  location: "Bangalore",
+  status: "PDI Verification"
+}
 
 function searchCustomer(){
 
