@@ -5,7 +5,14 @@ const customers = [
     tractor: "Mahindra 575 DI",
     location: "Bangalore",
     status: "PDI Verification"
-  }
+  },
+{
+  phone: "9353884417",
+  name: "Shivalingayya S/o Dundayya",
+  tractor: "Mahindra 575 DI",
+  location: "Bangalore",
+  status: "Verification"
+}
 ];
 
 function searchCustomer() {
