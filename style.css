@@ -75,3 +75,43 @@ p{
 b{
     color:#222;
 }
+
+.timeline{
+    margin-top:20px;
+    border-left:4px solid #0b7a33;
+    padding-left:18px;
+}
+
+.step{
+    position:relative;
+    margin:18px 0;
+    font-size:16px;
+    font-weight:600;
+    color:#333;
+}
+
+.step::before{
+    content:"";
+    position:absolute;
+    left:-27px;
+    top:4px;
+    width:14px;
+    height:14px;
+    border-radius:50%;
+    background:#cfcfcf;
+}
+
+.step.active{
+    color:#0b7a33;
+}
+
+.step.active::before{
+    background:#0b7a33;
+    box-shadow:0 0 10px #0b7a33;
+}
+
+h3{
+    margin-top:20px;
+    color:#0b7a33;
+    text-align:center;
+    }
