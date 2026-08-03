@@ -1,90 +1,77 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
 body{
-margin:0;
-padding:0;
-font-family:Arial,sans-serif;
-background:#eef5ef;
+    background:#eef4ef;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
 }
 
 .container{
-width:92%;
-max-width:500px;
-margin:30px auto;
-background:#fff;
-padding:20px;
-border-radius:15px;
-box-shadow:0 10px 30px rgba(0,0,0,.15);
+    width:95%;
+    max-width:550px;
+    background:#fff;
+    padding:25px;
+    border-radius:18px;
+    box-shadow:0 10px 30px rgba(0,0,0,.15);
 }
 
 h1{
-text-align:center;
-color:#0b7a33;
-font-size:28px;
-margin-bottom:20px;
+    text-align:center;
+    color:#0b7a33;
+    margin-bottom:20px;
 }
 
 input{
-width:100%;
-padding:14px;
-border:2px solid #0b7a33;
-border-radius:10px;
-font-size:16px;
-margin-bottom:15px;
-box-sizing:border-box;
+    width:100%;
+    padding:14px;
+    border:2px solid #0b7a33;
+    border-radius:10px;
+    font-size:16px;
+    margin-bottom:15px;
 }
 
 button{
-width:100%;
-padding:14px;
-background:#0b7a33;
-color:#fff;
-font-size:17px;
-font-weight:bold;
-border:none;
-border-radius:10px;
-cursor:pointer;
+    width:100%;
+    padding:14px;
+    background:#0b7a33;
+    color:#fff;
+    border:none;
+    border-radius:10px;
+    font-size:16px;
+    cursor:pointer;
+    transition:.3s;
 }
 
 button:hover{
-background:#086227;
+    background:#085c26;
 }
 
 #customerDetails{
-margin-top:20px;
-background:#f8fff8;
-border-left:6px solid #0b7a33;
-padding:18px;
-border-radius:10px;
-box-shadow:0 4px 12px rgba(0,0,0,.08);
+    margin-top:25px;
+    background:#f7fff8;
+    border-left:5px solid #0b7a33;
+    border-radius:12px;
+    padding:18px;
 }
 
 #customerDetails h2{
-text-align:center;
-color:#0b7a33;
-margin-top:0;
+    text-align:center;
+    color:#0b7a33;
+    margin-bottom:15px;
 }
 
 p{
-font-size:16px;
-margin:10px 0;
+    margin:12px 0;
+    font-size:17px;
 }
 
-span{
-font-weight:bold;
-color:#222;
-}
-
-.status{
-display:inline-block;
-background:#0b7a33;
-color:#fff;
-padding:4px 10px;
-border-radius:20px;
-font-size:14px;
-}
-
-.footer{
-text-align:center;
-margin-top:20px;
-font-size:13px;
-color:#666;
+b{
+    color:#222;
 }
