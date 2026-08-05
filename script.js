@@ -11,7 +11,7 @@ const customers = [
   name: "Shivalingayya S/o Dundayya",
   tractor: "Mahindra 575 DI",
   location: "Bangalore",
-  status:  "Documents Verification"
+  status: "PDI Verification"
 }
 ];
 
