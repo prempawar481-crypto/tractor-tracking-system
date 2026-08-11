@@ -4,15 +4,14 @@ const customers = [
     name: "Mahantappa S/o Guranna",
     tractor: "Mahindra 575 DI",
     location: "Bangalore",
-    status:  "Documents Verification"
+    status: "PDI Verification"
   },
 {
   phone: "9353884417",
   name: "Shivalingayya S/o Dundayya",
   tractor: "Mahindra 575 DI",
   location: "Bangalore",
-  status: "PDI Verification"
-}
+  status:  "PDI Verification"
 ];
 
 function searchCustomer() {
