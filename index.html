@@ -1,67 +1,282 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>TRACTOR Transport Tracking System</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mahindra Tractor Transport Tracking</title>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #e5f7ef;
+  color: #222;
+}
+
+.container {
+  width: 100%;
+  max-width: 650px;
+  margin: auto;
+  padding: 35px 18px;
+}
+
+.header {
+  text-align: center;
+}
+
+.header h1 {
+  color: #c92323;
+  font-size: 30px;
+  margin: 10px 0;
+}
+
+.header h2 {
+  margin: 5px 0;
+  font-size: 25px;
+}
+
+.header p {
+  font-size: 17px;
+  margin-bottom: 25px;
+}
+
+input {
+  width: 100%;
+  padding: 17px;
+  font-size: 18px;
+  border: 2px solid #23864d;
+  border-radius: 12px;
+  outline: none;
+  margin-bottom: 12px;
+}
+
+button {
+  width: 100%;
+  padding: 17px;
+  font-size: 18px;
+  border: none;
+  border-radius: 12px;
+  background: #08752f;
+  color: white;
+  cursor: pointer;
+}
+
+button:active {
+  transform: scale(0.99);
+}
+
+.customer {
+  display: none;
+  background: #f8fff9;
+  margin-top: 25px;
+  padding: 22px;
+  border-left: 7px solid #168344;
+  border-radius: 15px;
+}
+
+.customer h2 {
+  text-align: center;
+  color: #08752f;
+  margin-top: 0;
+}
+
+.customer p {
+  font-size: 17px;
+  margin: 12px 0;
+}
+
+.timeline {
+  margin-top: 20px;
+  border-left: 5px solid #168344;
+  padding-left: 18px;
+}
+
+.timeline h3 {
+  color: #08752f;
+  margin-left: -5px;
+}
+
+.step {
+  position: relative;
+  padding: 12px 8px;
+  font-size: 17px;
+  color: #555;
+}
+
+.step::before {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: #ccc;
+  left: -30px;
+  top: 15px;
+}
+
+.step.active {
+  color: #08752f;
+  font-weight: bold;
+}
+
+.step.active::before {
+  background: #08752f;
+}
+
+.error {
+  display: none;
+  margin-top: 20px;
+  padding: 15px;
+  background: #ffe5e5;
+  color: #b00000;
+  border-radius: 10px;
+  text-align: center;
+}
+</style>
 </head>
+
 <body>
 
 <div class="container">
 
-<div class="header">
+  <div class="header">
     <h1>🚜 Mahindra Tractor</h1>
-<h2>Transport Tracking Portal</h2>
-<p>Professional Vehicle Tracking System</p>
-</div>
+    <h2>Transport Tracking Portal</h2>
+    <p>Professional Vehicle Tracking System</p>
+  </div>
 
-    <input type="text" id="phoneSearch" placeholder="Enter Mobile Number">
-    <button onclick="searchCustomer()">Search</button>
+  <input
+    type="text"
+    id="phoneSearch"
+    placeholder="Enter Mobile Number"
+    maxlength="10"
+  >
 
-    <div id="customerDetails" style="display:none; margin-top:20px;">
-        <h2>Customer Details</h2>
+  <button onclick="searchCustomer()">Search</button>
 
-        <p><b>Name :</b> <span id="customerName"></span></p>
+  <div id="error" class="error">
+    Customer Not Found
+  </div>
 
-        <p><b>Tractor :</b> <span id="tractorModel"></span></p>
+  <div id="customerDetails" class="customer">
 
-        <p><b>Location :</b> <span id="tractorLocation"></span></p>
+    <h2>Customer Details</h2>
 
-        <p><b>Status :</b> <span id="tractorStatus"></span></p>
-        <h3>🚚 Transport Progress</h3>
+    <p><b>Name :</b> <span id="customerName"></span></p>
 
-<div class="timeline">
-  <div class="step">
-📄 Documents Verification</div>
+    <p><b>Tractor :</b> <span id="tractorModel"></span></p>
 
-<div class="step active">🔍 PDI Verification</div>
-  <div class="step">🚛 Dispatch from Bangalore</div>
-  <div class="step">🚚 In Transit</div>
-  <div class="step">📍 Hubballi Yard</div>
-  <div class="step">✅ Ready for Delivery</div>
-    <div class="step">📍 Hubballi Yard</div>
-<div class="step">✅ Ready for Delivery</div>
+    <p><b>Location :</b> <span id="tractorLocation"></span></p>
 
-<!-- ಇಲ್ಲಿ ಕೆಳಗೆ paste ಮಾಡು -->
+    <p><b>Status :</b> <span id="tractorStatus"></span></p>
 
-<div class="status-card">
-    <h3>🚜 Current Status</h3>
+    <div class="timeline">
 
-    <p><strong>Status :</strong>
-    <span id="tractorStatus"></span></p>
+      <h3>🚚 Transport Progress</h3>
 
-    <p><strong>📍 Current Location :</strong>
-    <span id="tractorLocation"></span></p>
+      <div class="step" id="step1">
+        📄 Documents Verification
+      </div>
 
-    <p><strong>🕒 Last Updated :</strong>
-    <span>04 Aug 2026 | 10:00 PM</span></p>
-</div>
+      <div class="step active" id="step2">
+        🔍 PDI Verification
+      </div>
 
-</div> <!-- customerDetails end -->
-</div>
+      <div class="step" id="step3">
+        🚛 Dispatch from Bangalore
+      </div>
+
+      <div class="step" id="step4">
+        🚚 In Transit
+      </div>
+
+      <div class="step" id="step5">
+        📍 Hubballi Yard
+      </div>
+
+      <div class="step" id="step6">
+        ✅ Ready for Delivery
+      </div>
+
     </div>
+
+  </div>
+
 </div>
 
-<script src="script.js"></script>
+<script>
+
+const customers = [
+  {
+    phone: "8495038473",
+    name: "Mahantappa S/o Guranna",
+    tractor: "Mahindra 575 DI",
+    location: "Bangalore",
+    status: "PDI Verification"
+  },
+  {
+    phone: "9353884417",
+    name: "Shivalingayya S/o Dundayya",
+    tractor: "Mahindra 575 DI",
+    location: "Bangalore",
+    status: "PDI Verification"
+  }
+];
+
+function searchCustomer() {
+
+  const phone = document
+    .getElementById("phoneSearch")
+    .value
+    .trim();
+
+  const customer = customers.find(
+    c => c.phone === phone
+  );
+
+  const details =
+    document.getElementById("customerDetails");
+
+  const error =
+    document.getElementById("error");
+
+  if (!customer) {
+
+    details.style.display = "none";
+    error.style.display = "block";
+
+    return;
+  }
+
+  error.style.display = "none";
+  details.style.display = "block";
+
+  document.getElementById("customerName").textContent =
+    customer.name;
+
+  document.getElementById("tractorModel").textContent =
+    customer.tractor;
+
+  document.getElementById("tractorLocation").textContent =
+    customer.location;
+
+  document.getElementById("tractorStatus").textContent =
+    customer.status;
+
+  // PDI Verification is the active stage
+  document.getElementById("step1").classList.remove("active");
+  document.getElementById("step2").classList.add("active");
+  document.getElementById("step3").classList.remove("active");
+  document.getElementById("step4").classList.remove("active");
+  document.getElementById("step5").classList.remove("active");
+  document.getElementById("step6").classList.remove("active");
+}
+
+</script>
 
 </body>
 </html>
