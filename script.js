@@ -6,18 +6,19 @@ const customers = [
     location: "Bangalore",
     status: "PDI Verification"
   },
-{
-  phone: "9353884417",
-  name: "Shivalingayya S/o Dundayya",
-  tractor: "Mahindra 575 DI",
-  location: "Bangalore",
-  status:  "PDI Verification"
+  {
+    phone: "9353884417",
+    name: "Shivalingayya S/o Dundayya",
+    tractor: "Mahindra 575 DI",
+    location: "Bangalore",
+    status: "PDI Verification"
+  }
 ];
 
 function searchCustomer() {
-  let phone = document.getElementById("phoneSearch").value.trim();
+  const phone = document.getElementById("phoneSearch").value.trim();
 
-  let customer = customers.find(c => c.phone === phone);
+  const customer = customers.find(c => c.phone === phone);
 
   if (!customer) {
     alert("Customer Not Found");
@@ -25,19 +26,43 @@ function searchCustomer() {
   }
 
   document.getElementById("customerDetails").style.display = "block";
-  let steps = document.querySelectorAll(".step");
-steps.forEach(step => step.classList.remove("active"));
-
-if(customer.status === "Documents Verification"){
-    steps[0].classList.add("active");
-}
-else if(customer.status === "PDI Verification"){
-    steps[0].classList.add("active");
-    steps[1].classList.add("active");
-}
 
   document.getElementById("customerName").innerHTML = customer.name;
   document.getElementById("tractorModel").innerHTML = customer.tractor;
   document.getElementById("tractorLocation").innerHTML = customer.location;
   document.getElementById("tractorStatus").innerHTML = customer.status;
+
+  updateTimeline(customer.status);
+}
+
+function updateTimeline(status) {
+  const steps = document.querySelectorAll(".timeline .step");
+
+  steps.forEach(step => {
+    step.classList.remove("active");
+  });
+
+  if (status === "Documents Verification") {
+    if (steps[0]) steps[0].classList.add("active");
+  }
+
+  if (status === "PDI Verification") {
+    if (steps[1]) steps[1].classList.add("active");
+  }
+
+  if (status === "Dispatch from Bangalore") {
+    if (steps[2]) steps[2].classList.add("active");
+  }
+
+  if (status === "In Transit") {
+    if (steps[3]) steps[3].classList.add("active");
+  }
+
+  if (status === "Hubballi Yard") {
+    if (steps[4]) steps[4].classList.add("active");
+  }
+
+  if (status === "Ready for Delivery") {
+    if (steps[5]) steps[5].classList.add("active");
+  }
 }
