@@ -270,13 +270,24 @@ function searchCustomer() {
     customer.tractor;
 
   document.getElementById("tractorLocation").textContent =
-    customer.location;
+    document.querySelectorAll(".step").forEach(step => {
+    step.classList.remove("active");
+});
 
-  document.getElementById("tractorStatus").textContent =
-    customer.status;
+const steps = {
+    "Documents Verification": "step1",
+    "PDI Verification": "step2",
+    "Dispatch from Bangalore": "step3",
+    "In Transit": "step4",
+    "Hubballi Yard": "step5",
+    "Ready for Delivery": "step6"
+};
 
-  // PDI Verification is the active stage
-  document.getElementById("step1").classList.remove("active");
+const activeStep = steps[customer.status];
+
+if (activeStep) {
+    document.getElementById(activeStep).classList.add("active");
+}
   document.getElementById("step2").classList.add("active");
   document.getElementById("step3").classList.remove("active");
   document.getElementById("step4").classList.remove("active");
