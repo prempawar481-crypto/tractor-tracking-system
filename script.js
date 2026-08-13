@@ -14,11 +14,12 @@ const customers = [
     status: "PDI Verification"
   } ,
 {
-  phone: "9741358538",
-  name: "Mahendra",
-  tractor: "Mahindra 575 DI BP",
-  location: "Bangalore",
-  status: "Documents Verification"
+    phone: "9741358538",
+    name: "Mahamad Mustaf S/o Gulamoddina R/o Dyamanala",
+    tractor: "Mahindra 575 DI BP",
+    location: "Bangalore",
+    status: "Documents Verification"
+}
 }
 ];
 
