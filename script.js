@@ -12,7 +12,14 @@ const customers = [
     tractor: "Mahindra 575 DI",
     location: "Bangalore",
     status: "PDI Verification"
-  }
+  } ,
+{
+  phone: "9741358538",
+  name: "Mahendra",
+  tractor: "Mahindra 575 DI BP",
+  location: "Bangalore",
+  status: "Documents Verification"
+}
 ];
 
 function searchCustomer() {
