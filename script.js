@@ -18,7 +18,7 @@ const customers = [
     name: "Mahamad Mustaf S/o Gulamoddina R/o Dyamanala",
     tractor: "Mahindra 575 DI BP",
     location: "Bangalore",
-    status: "Documents Verification"
+status: "Dispatch from Bangalore"
 }
 
 ];
